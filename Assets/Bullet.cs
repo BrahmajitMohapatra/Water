@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 
     public float m_Force = 100;
-    public float m_LifeTime = 5;
+    public float m_LifeTime = 05;
     public float m_Value = 0.1f;
     private Rigidbody m_Rigidbody;
 
@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour {
 	void Start () {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Rigidbody.AddForce(transform.right * m_Force);
-
+        //Destroy the game object and lifrtime
         Destroy(gameObject, m_LifeTime);
 	}
 	
